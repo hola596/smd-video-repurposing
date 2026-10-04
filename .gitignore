@@ -36,3 +36,5 @@ next-env.d.ts
 # Duplicate root assets (already in /public)
 /Video portada/
 /LOGO.png
+
+.vercel
