@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-obsidian: #08080a;
+  --color-onyx: #040406;
+  --color-carbon: #121317;
+  --color-graphite: #1c1d22;
+  --color-slate: #2e3038;
+  --color-bone: #e2e3e9;
+  --color-fog: #9194a1;
+  --color-paper-white: #ffffff;
+  --color-copper: #cc9166;
+  --gradient-gilded: linear-gradient(103deg, rgb(174, 147, 87), rgb(255, 240, 204) 40%, rgb(174, 147, 87) 70%, rgba(189, 157, 79, 0));
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-obsidian);
+  color: var(--color-bone);
+  font-family: var(--font-sans), 'Inter', system-ui, -apple-system, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #08080a;
+  color: #e2e3e9;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Luxury Didone Headings */
+h1, h2, h3, .font-serif-luxury {
+  font-family: var(--font-serif), 'Playfair Display', 'DM Serif Display', Georgia, serif;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+
+/* Custom Scrollbar for Luxury Dark Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1d22;
+  border-radius: 9999px;
+  border: 2px solid #08080a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3038;
+}
+
+/* Hairline Card Structure */
+.vault-card {
+  background-color: #040406;
+  border: 1px solid #1c1d22;
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.vault-card:hover {
+  border-color: #2e3038;
+}
+
+/* Floating Carbon Panel */
+.vault-panel {
+  background-color: #121317;
+  border: 1px solid #1c1d22;
+  border-radius: 12px;
+}
+
+/* Pill Form Controls */
+.vault-pill {
+  border-radius: 9999px;
+}
+
+/* Gilded Accent Text */
+.text-gilded {
+  background: var(--gradient-gilded);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Hairline Dividers */
+.hairline-divider {
+  border-bottom: 1px solid #1c1d22;
+}
+
+/* Slider Track Customization */
+input[type=range] {
+  -webkit-appearance: none;
+  background: #1c1d22;
+  border-radius: 9999px;
+  height: 6px;
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #cc9166;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(204, 145, 102, 0.4);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type=range]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #cc9166;
+  cursor: pointer;
+}
