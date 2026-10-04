@@ -2,7 +2,9 @@
 
 Landing page de alto rendimiento desarrollada para **Alan / SMD (Servicio de Marketing Digital)** con el sistema de diseño **Slash / Midnight Vault**, optimizada para máxima velocidad (Core Web Vitals 100/100), SEO técnico, AEO (SearchGPT, Perplexity, Gemini) y conversión con cotizador interactivo.
 
-**Dominio de producción:** `videos.serviciodemarketingdigital.com`
+**Dominio de producción asignado:** [https://smd-video-repurposing.vercel.app](https://smd-video-repurposing.vercel.app)  
+**Dominio personalizado final:** `videos.serviciodemarketingdigital.com`  
+**Repositorio GitHub:** [https://github.com/hola596/smd-video-repurposing](https://github.com/hola596/smd-video-repurposing)
 
 ---
 
