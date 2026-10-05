@@ -19,6 +19,13 @@ import {
   ChevronDown,
   Zap,
   TrendingUp,
+  Radio,
+  FolderArchive,
+  Plane,
+  Layers,
+  GraduationCap,
+  Target,
+  CheckCircle2,
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -41,6 +48,10 @@ export default function HomePage() {
   };
 
   const faqs = [
+    {
+      q: '¿Para qué sirve exactamente reciclar videos largos en clips cortos?',
+      a: 'Sirve para no desperdiciar horas de grabación que ya hiciste. Si tienes podcasts, conferencias, webinars o cursos, los reciclamos en piezas verticales de 30 a 60 segundos para alimentar TikTok, Reels y YouTube Shorts todos los días, manteniendo tu presencia activa sin que tengas que grabar contenido nuevo constantemente.',
+    },
     {
       q: '¿Cómo entrego mis videos largos?',
       a: 'Nos compartes el enlace de YouTube o una carpeta en Google Drive / Dropbox con tus grabaciones en 1080p o 4K.',
@@ -111,17 +122,17 @@ export default function HomePage() {
             {/* Eyebrow Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-pill bg-carbon/90 border border-graphite backdrop-blur-md text-[12px] sm:text-[13px] text-copper font-sans tracking-widest uppercase mb-6 shadow-lg">
               <span className="w-1.5 h-1.5 rounded-full bg-copper animate-pulse" />
-              <span>REPURPOSING AUDIOVISUAL & EDICIÓN ESTRATÉGICA</span>
+              <span>RECICLADO AUDIOVISUAL & EDICIÓN ESTRATÉGICA</span>
             </div>
 
             {/* Main H1 Title (Didone Serif Luxury) */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-paper-white tracking-tight max-w-5xl mx-auto leading-[1.12] drop-shadow-2xl">
-              Transformo tus videos largos en decenas de clips virales para Reels, TikTok y YouTube Shorts.
+              Reciclo videos largos en clips cortos para Reels, TikTok y YouTube Shorts.
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 sm:mt-8 text-base sm:text-xl text-bone/90 max-w-3xl mx-auto font-sans font-normal leading-relaxed drop-shadow-md">
-              No pierdas horas editando ni dejes tus podcasts y webinars archivados. Entrégame tus grabaciones de 1 hora y te devuelvo micro-videos con ganchos de retención, subtítulos dinámicos y formato vertical listos para publicar.
+              ¿Para qué sirve? Si tienes podcasts, webinars o grabaciones de 1 hora, los reciclo en piezas verticales de 30 a 60 segundos con ganchos de retención y subtítulos dinámicos. Mantén tu presencia activa todos los días sin tener que grabar contenido nuevo.
             </p>
 
             {/* CTA Buttons */}
@@ -175,9 +186,147 @@ export default function HomePage() {
                 Resumen Ejecutivo del Servicio
               </h2>
               <p className="text-xs sm:text-sm text-bone leading-relaxed">
-                <strong>SMD (Servicio de Marketing Digital)</strong> es un servicio Done-For-You de repurposing y edición audiovisual dirigido por <strong>Alan</strong>, que transforma grabaciones extensas de podcasts, conferencias y webinars en piezas verticales de alto impacto (9:16) para TikTok, Instagram Reels y YouTube Shorts, aplicando ganchos de retención comprobados, ritmo dinámico y subtítulos palabra por palabra.
+                <strong>SMD (Servicio de Marketing Digital)</strong> es un servicio Done-For-You dirigido por <strong>Alan</strong>: reciclo videos largos en clips cortos (9:16) para TikTok, Instagram Reels y YouTube Shorts, resolviendo la falta de tiempo de podcasters, educadores y marcas para mantener presencia constante en redes sin grabar todos los días.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* SECCIÓN: PARA QUÉ SIRVE & PUNTOS DE DOLOR */}
+        <section className="py-24 relative bg-onyx/60 border-b border-graphite" aria-labelledby="pain-points-heading">
+          <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-pill bg-carbon border border-graphite text-xs text-copper font-mono uppercase tracking-widest mb-4">
+                <Target className="w-3.5 h-3.5" />
+                <span>¿Para Qué Sirve el Reciclado de Video?</span>
+              </div>
+              <h2
+                id="pain-points-heading"
+                className="text-3xl sm:text-5xl font-serif text-paper-white tracking-tight"
+              >
+                Resuelve los 5 grandes problemas de visibilidad de tu contenido
+              </h2>
+              <p className="mt-4 text-sm sm:text-base text-fog leading-relaxed">
+                Ya invertiste tiempo y recursos grabando horas de gran valor. Si no las distribuyes en clips cortos, estás perdiendo el 90% de su audiencia potencial. Aquí es exactamente donde el servicio te ahorra tiempo y multiplica tu presencia:
+              </p>
+            </div>
+
+            {/* 5 Pain Points Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              {/* 1. Poca visibilidad orgánica de episodios completos */}
+              <div className="vault-card p-6 bg-carbon/85 border border-graphite hover:border-copper/60 transition-all rounded-2xl flex flex-col justify-between group shadow-lg">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-copper/15 border border-copper/30 flex items-center justify-center text-copper mb-4 group-hover:scale-105 transition-transform">
+                    <Radio className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-copper font-semibold block mb-1">
+                    Punto de Dolor #1
+                  </span>
+                  <h3 className="text-base font-semibold text-paper-white mb-2 leading-snug">
+                    Poca visibilidad orgánica de episodios completos
+                  </h3>
+                  <p className="text-xs text-fog leading-relaxed">
+                    Subir un episodio de 45 o 60 minutos a YouTube o Spotify ya no es suficiente: los algoritmos no recomiendan videos largos a personas que no te conocen. Sin clips cortos distribuidos en TikTok y Reels, tu contenido queda atrapado solo entre quienes ya te siguen.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-graphite/60 flex items-center gap-2 text-[11px] font-mono text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>Solución: Clips cortos que atraen miles de nuevos espectadores</span>
+                </div>
+              </div>
+
+              {/* 2. Webinars archivados en Zoom/Drive */}
+              <div className="vault-card p-6 bg-carbon/85 border border-graphite hover:border-copper/60 transition-all rounded-2xl flex flex-col justify-between group shadow-lg">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-copper/15 border border-copper/30 flex items-center justify-center text-copper mb-4 group-hover:scale-105 transition-transform">
+                    <FolderArchive className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-copper font-semibold block mb-1">
+                    Punto de Dolor #2
+                  </span>
+                  <h3 className="text-base font-semibold text-paper-white mb-2 leading-snug">
+                    Webinars archivados en Zoom o Drive sin generar tracción
+                  </h3>
+                  <p className="text-xs text-fog leading-relaxed">
+                    Preparar y dictar una clase magistral en vivo toma días de esfuerzo. Al terminar el evento, la grabación queda guardada en la nube sin volver a generar un solo lead ni visualización post-evento.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-graphite/60 flex items-center gap-2 text-[11px] font-mono text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>Solución: Reciclado de perlas de valor en activos diarios</span>
+                </div>
+              </div>
+
+              {/* 3. Dificultad para mantener presencia constante en redes */}
+              <div className="vault-card p-6 bg-carbon/85 border border-graphite hover:border-copper/60 transition-all rounded-2xl flex flex-col justify-between group shadow-lg">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-copper/15 border border-copper/30 flex items-center justify-center text-copper mb-4 group-hover:scale-105 transition-transform">
+                    <Plane className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-copper font-semibold block mb-1">
+                    Punto de Dolor #3
+                  </span>
+                  <h3 className="text-base font-semibold text-paper-white mb-2 leading-snug">
+                    Difícil mantener presencia mientras viajas o das cursos
+                  </h3>
+                  <p className="text-xs text-fog leading-relaxed">
+                    Atiendes clientes, dictas clases o estás de viaje. Es humanamente imposible sentarse a grabar reels individuales todos los días. Al reciclar lo que ya grabaste, tienes publicaciones continuas en piloto automático.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-graphite/60 flex items-center gap-2 text-[11px] font-mono text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>Solución: 1 hora de video = semanas de presencia constante</span>
+                </div>
+              </div>
+
+              {/* 4. Volumen inmanejable de horas de grabación */}
+              <div className="vault-card p-6 bg-carbon/85 border border-graphite hover:border-copper/60 transition-all rounded-2xl flex flex-col justify-between group shadow-lg">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-copper/15 border border-copper/30 flex items-center justify-center text-copper mb-4 group-hover:scale-105 transition-transform">
+                    <Layers className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-copper font-semibold block mb-1">
+                    Punto de Dolor #4
+                  </span>
+                  <h3 className="text-base font-semibold text-paper-white mb-2 leading-snug">
+                    Volumen inmanejable de horas para equipos pequeños
+                  </h3>
+                  <p className="text-xs text-fog leading-relaxed">
+                    Revisar decenas de horas de video, cortar los silencios, seleccionar los mejores momentos, encuadrar en 9:16 y subtitular palabra por palabra consume cientos de horas que tu equipo o tú no pueden destinar.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-graphite/60 flex items-center gap-2 text-[11px] font-mono text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>Solución: Servicio Done-For-You llave en mano en 48-72h</span>
+                </div>
+              </div>
+
+              {/* 5. Necesidad constante de nutrir audiencias para lanzamientos */}
+              <div className="vault-card p-6 bg-carbon/85 border border-graphite hover:border-copper/60 transition-all rounded-2xl flex flex-col justify-between group shadow-lg md:col-span-2 lg:col-span-2">
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-copper/15 border border-copper/30 flex items-center justify-center text-copper mb-4 group-hover:scale-105 transition-transform">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-copper font-semibold block mb-1">
+                    Punto de Dolor #5
+                  </span>
+                  <h3 className="text-base font-semibold text-paper-white mb-2 leading-snug">
+                    Necesidad constante de nutrir audiencias para lanzamientos de cursos
+                  </h3>
+                  <p className="text-xs text-fog leading-relaxed">
+                    Para que una apertura de plazas o lanzamiento de infoproducto funcione con éxito, necesitas educar y derribar objeciones de tu comunidad semanas antes. Reciclamos los mejores fragmentos de tus cursos o consultorías pasadas para preparar a tus futuros alumnos sin improvisar contenido a última hora.
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-graphite/60 flex items-center gap-2 text-[11px] font-mono text-emerald-400">
+                  <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0" />
+                  <span>Solución: Audiencia educada y convencida lista para comprar tu oferta</span>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </section>
 

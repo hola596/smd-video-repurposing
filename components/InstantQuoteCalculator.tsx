@@ -228,7 +228,7 @@ export default function InstantQuoteCalculator() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-copper flex-shrink-0" />
-              <span>Detección de ganchos virales y criterio editorial de alto impacto</span>
+              <span>Detección de ganchos de alta retención y criterio editorial</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-copper flex-shrink-0" />

@@ -52,10 +52,10 @@ export default function ServicesAndAbout() {
                   <strong className="text-paper-white font-semibold">SMD (Servicio de Marketing Digital)</strong>.
                 </p>
                 <p className="text-fog">
-                  Ayudo a podcasters, consultores, formadores y empresas B2B a resolver el cuello de botella más común: tienen horas de contenido valioso grabado, pero no tienen tiempo ni equipo para trocearlo en piezas cortas diarias.
+                  <strong className="text-copper font-medium">Reciclo videos largos en clips cortos</strong> para resolver el problema que enfrentan creadores, educadores y marcas: tienen horas de podcasts, conferencias o webinars grabados, pero carecen de tiempo y equipo para trocearlos en piezas diarias para TikTok, Reels y Shorts.
                 </p>
                 <p className="text-fog">
-                  Aplico un criterio editorial de élite y técnicas avanzadas de retención para entregar piezas con impacto garantizado, subtítulos sin faltas y ritmo ágil.
+                  Aplico criterio editorial estratégico y técnicas avanzadas de retención para entregar piezas verticales listas para publicar, con subtítulos dinámicos sin faltas y ritmo ágil.
                 </p>
               </div>
 

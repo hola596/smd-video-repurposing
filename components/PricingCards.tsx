@@ -32,7 +32,7 @@ export default function PricingCards() {
         'Hasta 7 videos largos (≤ 7 horas al mes)',
         'Hasta 40 clips verticales terminados',
         'Costo de ~$5 USD por clip final',
-        'Detección de ganchos virales de alta retención',
+        'Detección de ganchos de alta retención',
         'Corrección ortográfica humana estricta',
         'Plantillas de diseño adaptadas a tu marca',
         'Entrega continua cada 48-72h',

@@ -30,7 +30,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms }: FooterProps) {
               />
             </div>
             <p className="text-xs sm:text-sm text-fog max-w-sm leading-relaxed">
-              Servicio Done-For-You de repurposing y edición audiovisual de alto impacto. Convierte grabaciones largas en micro-contenido viral diario para Reels, TikTok y YouTube Shorts.
+              Servicio Done-For-You: reciclo videos largos en clips cortos para Reels, TikTok y YouTube Shorts. Resuelvo la falta de tiempo de distribución para creadores y marcas.
             </p>
           </div>
 

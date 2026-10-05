@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'SMD - Repurposing de Video Profesional';
+export const alt = 'SMD - Reciclo videos largos en clips cortos';
 export const size = {
   width: 1200,
   height: 630,
@@ -47,13 +47,13 @@ export default async function Image() {
               textTransform: 'uppercase',
             }}
           >
-            SMD • Servicio de Marketing Digital
+            SMD • Alan • Repurposing Audiovisual
           </span>
         </div>
 
         <div
           style={{
-            fontSize: '56px',
+            fontSize: '58px',
             fontWeight: 800,
             color: '#ffffff',
             textAlign: 'center',
@@ -63,7 +63,7 @@ export default async function Image() {
             fontFamily: 'serif',
           }}
         >
-          Transformo tus videos largos en decenas de clips virales
+          Reciclo videos largos en clips cortos
         </div>
 
         <div
@@ -77,7 +77,7 @@ export default async function Image() {
             fontFamily: 'sans-serif',
           }}
         >
-          Servicio Done-For-You para podcasters y empresas B2B. Prueba 1 clip demo sin costo.
+          Para Reels, TikTok y YouTube Shorts • Servicio Done-For-You para podcasters y creadores.
         </div>
 
         <div

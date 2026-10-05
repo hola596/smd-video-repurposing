@@ -17,7 +17,7 @@ export default function HowItWorks() {
       description:
         'Identifico los momentos de mayor retención e impacto, aplico encuadre vertical dinámico 9:16 al orador y agrego subtítulos palabra por palabra con ritmo ágil.',
       icon: Film,
-      meta: 'Ganchos Virales + Subtítulos + Ritmo',
+      meta: 'Ganchos de Retención + Subtítulos + Ritmo',
     },
     {
       number: '03',

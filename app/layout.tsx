@@ -3,18 +3,19 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://videos.serviciodemarketingdigital.com'),
-  title: 'Edición de Video Largo a Shorts, Reels y TikTok | Alan - SMD',
+  title: 'Reciclo videos largos en clips cortos | SMD',
   description:
-    'Transformo tus podcasts, webinars y videos de 1 hora en decenas de clips virales con ganchos y subtítulos dinámicos. Prueba tu primer clip gratis.',
+    'Reciclo videos largos en clips cortos para Reels, TikTok y YouTube Shorts. Resuelvo la falta de tiempo de podcasters, educadores y marcas para mantener presencia constante en redes sin grabar todos los días. Prueba 1 clip gratis.',
   keywords: [
+    'reciclo videos largos en clips cortos',
     'repurposing de video',
-    'editor de videos largos a shorts',
-    'edicion de podcasts para reels',
-    'clips de tiktok virales',
+    'clips cortos para reels',
+    'reciclado de podcasts',
     'edicion de video vertical profesional',
+    'clips para tiktok y shorts',
     'servicio de marketing digital alan',
     'smd video repurposing',
-    'subtitulos dinamicos virales',
+    'subtitulos dinamicos de alta retencion',
   ],
   authors: [{ name: 'Alan', url: 'https://videos.serviciodemarketingdigital.com' }],
   creator: 'Alan - SMD (Servicio de Marketing Digital)',
@@ -38,24 +39,24 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: 'https://videos.serviciodemarketingdigital.com',
     siteName: 'SMD - Servicio de Marketing Digital',
-    title: 'Transformo tus videos largos en clips virales | SMD',
+    title: 'Reciclo videos largos en clips cortos | SMD',
     description:
-      'Servicio Done-For-You para podcasters y empresas B2B. Prueba 1 clip demo sin costo.',
+      'Reciclo videos largos en clips cortos para Reels, TikTok y YouTube Shorts. Convierte podcasts y webinars en presencia diaria sin grabar desde cero. Prueba 1 clip gratis.',
     images: [
       {
         url: 'https://videos.serviciodemarketingdigital.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'SMD - Repurposing de Video Largo a Clips Virales',
+        alt: 'SMD - Reciclo videos largos en clips cortos',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Transformo tus videos largos en clips virales | SMD',
+    title: 'Reciclo videos largos en clips cortos | SMD',
     description:
-      'Servicio Done-For-You para podcasters y empresas B2B. Prueba 1 clip demo sin costo.',
+      'Reciclo videos largos en clips cortos para Reels, TikTok y YouTube Shorts. Convierte podcasts y webinars en presencia diaria sin grabar desde cero. Prueba 1 clip gratis.',
     images: ['https://videos.serviciodemarketingdigital.com/og-image.png'],
     creator: '@alan_smd',
   },
@@ -78,7 +79,7 @@ const jsonLd = {
       logo: 'https://videos.serviciodemarketingdigital.com/logo.png',
       image: 'https://videos.serviciodemarketingdigital.com/og-image.png',
       description:
-        'Servicio profesional Done-For-You de repurposing de video largo a clips verticales para Reels, TikTok y YouTube Shorts.',
+        'Servicio profesional Done-For-You: reciclo videos largos en clips cortos para Reels, TikTok y YouTube Shorts.',
       priceRange: '$45 - $400 USD',
       telephone: '+5491127887093',
       email: 'hola@serviciodemarketingdigital.com',
