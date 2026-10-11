@@ -6,6 +6,7 @@ import HowItWorks from '../components/HowItWorks';
 import PortfolioGrid from '../components/PortfolioGrid';
 import ServicesAndAbout from '../components/ServicesAndAbout';
 import InstantQuoteCalculator from '../components/InstantQuoteCalculator';
+import HumanVsAiDifferentiator from '../components/HumanVsAiDifferentiator';
 import PricingCards from '../components/PricingCards';
 import SecureContactForm from '../components/SecureContactForm';
 import Footer from '../components/Footer';
@@ -340,6 +341,9 @@ export default function HomePage() {
         <ServicesAndAbout />
 
         {/* COTIZADOR INTERACTIVO & PRECIOS */}
+        {/* Módulo de Diferenciación frente a IA Sola (OpusClip / Submagic) */}
+        <HumanVsAiDifferentiator />
+
         <section id="precios" className="py-24 relative" aria-labelledby="pricing-heading">
           <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -359,11 +363,18 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Interactive Calculator */}
-            <InstantQuoteCalculator />
-
-            {/* Visual 3-Plan Comparison */}
+            {/* Visual 3-Plan Comparison (Planes Base Visibles para Anclaje de Valor) */}
             <PricingCards />
+
+            {/* Divisor con llamada al cotizador personalizado */}
+            <div className="pt-12 text-center max-w-xl mx-auto space-y-2">
+              <span className="text-xs font-mono uppercase tracking-widest text-copper block">¿Necesitas un volumen específico?</span>
+              <h3 className="text-xl font-serif text-paper-white">Calcula tu presupuesto personalizado a medida</h3>
+              <p className="text-xs text-fog">Ajusta los deslizadores según la cantidad exacta de horas que grabas al mes:</p>
+            </div>
+
+            {/* Interactive Calculator Personalizado */}
+            <InstantQuoteCalculator />
 
             {/* Guarantee callout */}
             <div className="mt-14 max-w-2xl mx-auto text-center p-6 rounded-card bg-copper/5 border border-copper/30">

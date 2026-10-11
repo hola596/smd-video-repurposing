@@ -1,162 +1,191 @@
-import React from 'react';
-import { Check, Sparkles, MessageCircle, Star } from 'lucide-react';
+"use client";
+
+import React, { useState } from 'react';
+import { Check, Sparkles, MessageCircle, Star, ArrowRight } from 'lucide-react';
 
 export default function PricingCards() {
+  const [currency, setCurrency] = useState<'USD' | 'ARS'>('USD');
+
   const plans = [
     {
-      name: 'Plan Prueba',
-      tagline: 'Ideal para probar sin compromisos',
-      price: '45',
-      period: 'pago único por video',
-      badge: 'Sin Recurrencia',
+      name: 'Pack Esencial',
+      tagline: 'Presencia constante garantizada (3 clips por semana)',
+      priceUsd: '320',
+      priceArs: '390.000',
+      period: currency === 'USD' ? 'USD / mes' : 'ARS / mes',
+      volume: '12 Clips Verticales / mes',
+      badge: 'Constancia Semanal',
       isPopular: false,
       features: [
-        'Procesamiento de 1 video de hasta 60 min',
-        'Hasta 5 clips verticales terminados',
-        'Subtítulos dinámicos palabra por palabra',
-        'Encuadre inteligente 9:16 al orador',
-        'Entrega en Google Drive en 48 horas',
-        '1 ronda de ajustes incluida',
+        'Curaduría humana de 1 a 2 videos largos al mes (podcasts/webinars)',
+        '12 clips verticales (9:16) con ganchos de retención comprobados',
+        'Subtítulos dinámicos sin faltas ortográficas verificados a mano',
+        'Encuadre cinematográfico 9:16 centrado en el orador',
+        'Entregas semanales listas para publicar en Drive',
+        '1 ronda de ajustes y afinaciones incluida',
+        'Formato para Reels, TikTok y YouTube Shorts',
       ],
-      ctaText: 'Pedir Plan Prueba ($45 USD)',
-      whatsappMessage: 'Hola Alan, quiero contratar el Plan Prueba de 1 video ($45 USD).',
+      ctaText: currency === 'USD' ? 'Elegir Pack 12 Clips ($320 USD)' : 'Elegir Pack 12 Clips ($390.000 ARS)',
+      whatsappMessage: 'Hola Alan, quiero contratar el Pack Esencial de 12 clips al mes.',
     },
     {
-      name: 'Plan Creador Básico',
-      tagline: 'Para creadores con publicación constante',
-      price: '200',
-      period: 'USD / mes',
-      badge: 'Más Elegido',
+      name: 'Pack Growth',
+      tagline: 'Presencia casi diaria en redes (6 clips por semana)',
+      priceUsd: '570',
+      priceArs: '690.000',
+      period: currency === 'USD' ? 'USD / mes' : 'ARS / mes',
+      volume: '24 Clips Verticales / mes',
+      badge: 'Más Elegido // Máximo Impacto',
       isPopular: true,
       features: [
-        'Hasta 7 videos largos (≤ 7 horas al mes)',
-        'Hasta 40 clips verticales terminados',
-        'Costo de ~$5 USD por clip final',
-        'Detección de ganchos de alta retención',
-        'Corrección ortográfica humana estricta',
-        'Plantillas de diseño adaptadas a tu marca',
-        'Entrega continua cada 48-72h',
-        'Soporte prioritario por WhatsApp',
+        'Curaduría de hasta 4 videos largos al mes (≤ 4 horas de material)',
+        '24 clips verticales de alto impacto (casi 1 clip por día)',
+        'Costo ultra eficiente: ~$23 USD por clip terminado',
+        'Detección de ganchos (hooks) con psicología de ventas',
+        'B-rolls contextuales y efectos de sonido para sostener atención',
+        'Portadas personalizadas en alta resolución para Instagram y YouTube',
+        'Entregas continuas cada 48-72 horas',
+        'Soporte prioritario por WhatsApp directo con Alan',
       ],
-      ctaText: 'Comenzar Plan Creador ($200/mes)',
-      whatsappMessage:
-        'Hola Alan, quiero comenzar con el Plan Creador Básico de $200 USD/mes. Quiero mi clip demo gratis primero.',
+      ctaText: currency === 'USD' ? 'Elegir Pack 24 Clips ($570 USD)' : 'Elegir Pack 24 Clips ($690.000 ARS)',
+      whatsappMessage: 'Hola Alan, quiero contratar el Pack Growth de 24 clips al mes. Solicito mi clip de prueba gratis.',
     },
     {
-      name: 'Plan Escala Premium',
-      tagline: 'Para podcasters y empresas con alta frecuencia',
-      price: '400',
-      period: 'USD / mes',
-      badge: 'Mejor Relación Valor/Precio',
+      name: 'Pack Omnipresencia B2B',
+      tagline: 'Autoridad absoluta de marca y distribución multicanal',
+      priceUsd: '850',
+      priceArs: '990.000',
+      period: currency === 'USD' ? 'USD / mes' : 'ARS / mes',
+      volume: '36 a 40 Clips Verticales / mes',
+      badge: 'Mejor Relación Volumen / Valor',
       isPopular: false,
       features: [
-        'Hasta 16 videos largos (≤ 16 horas al mes)',
-        'Hasta 100 clips verticales terminados',
-        'Costo de ~$4 USD por clip final',
-        'B-Roll, efectos de sonido y zoom sutil',
-        'Formatos optimizados para TikTok, Reels y Shorts',
-        'Entrega en 24-48 horas prioritarias',
-        'Canal privado de Slack/WhatsApp directo',
-        'Garantía total de satisfacción',
+        'Curaduría exhaustiva de hasta 8 videos largos al mes',
+        '36 a 40 clips terminados (cobertura diaria en todas las plataformas)',
+        'Costo récord de ~$21 USD por clip terminado',
+        'Estrategia de contenido: redacción de copys y hashtags para cada post',
+        'Guiones sugeridos de intro/outro para tus próximas grabaciones',
+        'Exportación multiformato: Vertical (9:16), Cuadrado (1:1) y Horizontal',
+        'Publicación programada opcional en tus redes',
+        'Soporte VIP 24/7 y canal exclusivo en Slack / WhatsApp',
       ],
-      ctaText: 'Comenzar Plan Escala ($400/mes)',
-      whatsappMessage:
-        'Hola Alan, quiero solicitar el Plan Escala Premium de $400 USD/mes para copar mis redes con 100 clips.',
+      ctaText: currency === 'USD' ? 'Elegir Omnipresencia ($850 USD)' : 'Elegir Omnipresencia ($990.000 ARS)',
+      whatsappMessage: 'Hola Alan, me interesa el Pack Omnipresencia B2B de 36-40 clips al mes para mi empresa.',
     },
   ];
 
+  const officialWhatsapp = '5491127887093';
+
   return (
-    <div className="mt-16">
-      <div className="text-center mb-10">
-        <h3 className="text-2xl sm:text-3xl font-serif text-paper-white">
-          Comparativa Directa de Planes
-        </h3>
-        <p className="text-xs sm:text-sm text-fog mt-2">
-          Precios transparentes y sin contratos de permanencia. Cancela o cambia de plan en cualquier momento.
-        </p>
+    <div className="w-full space-y-10">
+      
+      {/* Switch de Divisa USD / ARS */}
+      <div className="flex items-center justify-center gap-3">
+        <span className="text-xs font-semibold text-fog uppercase tracking-wider font-sans">Moneda:</span>
+        <div className="inline-flex p-1 rounded-pill bg-carbon border border-graphite shadow-md">
+          <button
+            type="button"
+            onClick={() => setCurrency('USD')}
+            className={`px-4 py-1.5 rounded-pill text-xs font-bold transition-all ${
+              currency === 'USD'
+                ? 'bg-copper text-obsidian shadow-sm'
+                : 'text-fog hover:text-paper-white'
+            }`}
+          >
+            USD (Internacional / Latam / España)
+          </button>
+          <button
+            type="button"
+            onClick={() => setCurrency('ARS')}
+            className={`px-4 py-1.5 rounded-pill text-xs font-bold transition-all ${
+              currency === 'ARS'
+                ? 'bg-copper text-obsidian shadow-sm'
+                : 'text-fog hover:text-paper-white'
+            }`}
+          >
+            ARS (Argentina)
+          </button>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        {plans.map((plan) => {
-          const whatsappUrl = `https://wa.me/5491127887093?text=${encodeURIComponent(
-            plan.whatsappMessage
-          )}`;
+      {/* Grid de 3 Planes Base Visibles */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        {plans.map((p, idx) => (
+          <div
+            key={idx}
+            className={`rounded-card p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative text-left ${
+              p.isPopular
+                ? 'bg-carbon border-2 border-copper shadow-2xl shadow-copper/15 lg:-translate-y-2'
+                : 'bg-onyx/80 border border-graphite hover:border-slate/60 shadow-lg'
+            }`}
+          >
+            {/* Badge superior */}
+            {p.isPopular && (
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-copper text-obsidian text-[11px] font-bold font-sans uppercase tracking-widest px-3.5 py-1 rounded-pill shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                <Star className="w-3 h-3 fill-obsidian" />
+                <span>{p.badge}</span>
+              </div>
+            )}
 
-          return (
-            <div
-              key={plan.name}
-              className={`vault-card p-6 sm:p-8 flex flex-col justify-between relative transition-all duration-300 ${
-                plan.isPopular
-                  ? 'bg-onyx border-copper shadow-gilded ring-1 ring-copper/50 -translate-y-2'
-                  : 'bg-onyx border-graphite hover:border-slate'
-              }`}
-            >
-              {/* Badge */}
-              {plan.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span
-                    className={`inline-flex items-center gap-1 px-3 py-0.5 rounded-pill text-[10px] font-mono uppercase tracking-wider font-semibold ${
-                      plan.isPopular
-                        ? 'bg-copper text-obsidian'
-                        : 'bg-carbon text-fog border border-graphite'
-                    }`}
-                  >
-                    {plan.isPopular && <Star className="w-3 h-3 fill-obsidian" />}
-                    {plan.badge}
+            <div className="space-y-5">
+              <div>
+                {!p.isPopular && (
+                  <span className="inline-block text-[11px] font-sans font-medium text-ash uppercase tracking-widest mb-1">
+                    {p.badge}
+                  </span>
+                )}
+                <h3 className="text-2xl font-bold text-paper-white font-sans">{p.name}</h3>
+                <p className="text-xs text-fog mt-1 leading-relaxed">{p.tagline}</p>
+                <div className="mt-2.5 inline-block px-3 py-1 rounded-pill bg-copper/10 border border-copper/30 text-copper text-xs font-semibold">
+                  {p.volume}
+                </div>
+              </div>
+
+              {/* Precio */}
+              <div className="py-4 border-y border-graphite">
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-xs text-fog font-medium">{currency === 'USD' ? 'USD $' : 'ARS $'}</span>
+                  <span className="text-4xl sm:text-5xl font-serif text-paper-white font-bold tracking-tight">
+                    {currency === 'USD' ? p.priceUsd : p.priceArs}
                   </span>
                 </div>
-              )}
-
-              <div>
-                {/* Header */}
-                <div className="border-b border-graphite pb-6 mb-6">
-                  <h4 className="text-xl font-serif text-paper-white font-semibold">
-                    {plan.name}
-                  </h4>
-                  <p className="text-xs text-fog mt-1 min-h-[32px]">
-                    {plan.tagline}
-                  </p>
-                  <div className="mt-4 flex items-baseline gap-1">
-                    <span className="text-3xl sm:text-4xl font-serif text-paper-white font-bold">
-                      ${plan.price}
-                    </span>
-                    <span className="text-xs text-fog font-sans">
-                      {plan.period}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Features List */}
-                <ul className="space-y-3 mb-8 text-xs text-bone">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5">
-                      <Check className="w-4 h-4 text-copper flex-shrink-0 mt-0.5" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <span className="text-xs text-fog font-sans block mt-1">
+                  {currency === 'USD' ? 'Factura E internacional vía Stripe / PayPal' : 'Factura C oficial deducible en AFIP'}
+                </span>
               </div>
 
-              {/* Action Button */}
-              <div>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full py-3 px-4 rounded-pill text-xs font-semibold tracking-wider flex items-center justify-center gap-2 transition-all duration-200 ${
-                    plan.isPopular
-                      ? 'bg-paper-white hover:bg-bone text-obsidian shadow-md hover:scale-105'
-                      : 'bg-carbon hover:bg-graphite text-bone border border-slate'
-                  }`}
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>{plan.ctaText}</span>
-                </a>
-              </div>
+              {/* Lista de Beneficios */}
+              <ul className="space-y-3 text-xs sm:text-sm text-silver">
+                {p.features.map((f, fIdx) => (
+                  <li key={fIdx} className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-copper shrink-0 mt-0.5" />
+                    <span className="leading-snug">{f}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          );
-        })}
+
+            {/* CTA Button */}
+            <div className="pt-8">
+              <a
+                href={`https://wa.me/${officialWhatsapp}?text=${encodeURIComponent(p.whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-full py-3.5 px-6 rounded-pill text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer ${
+                  p.isPopular
+                    ? 'bg-copper hover:bg-copper/90 text-obsidian shadow-lg shadow-copper/25 hover:scale-[1.02]'
+                    : 'bg-carbon hover:bg-slate/40 text-paper-white border border-graphite hover:border-steel'
+                }`}
+              >
+                <span>{p.ctaText}</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+          </div>
+        ))}
       </div>
+
     </div>
   );
 }
