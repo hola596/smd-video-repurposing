@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import HowItWorks from '../components/HowItWorks';
+import VideoStylesShowcase from '../components/VideoStylesShowcase';
 import PortfolioGrid from '../components/PortfolioGrid';
 import ServicesAndAbout from '../components/ServicesAndAbout';
 import InstantQuoteCalculator from '../components/InstantQuoteCalculator';
@@ -39,6 +40,24 @@ export default function HomePage() {
   });
 
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  
+  // Desktop Mouse Movement Parallax State for Hero
+  const [heroMouse, setHeroMouse] = useState({ x: 0, y: 0, rotateX: 0, rotateY: 0, active: false });
+
+  const handleHeroMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateY = ((x - centerX) / centerX) * 4;
+    const rotateX = -((y - centerY) / centerY) * 4;
+    setHeroMouse({ x, y, rotateX, rotateY, active: true });
+  };
+
+  const handleHeroMouseLeave = () => {
+    setHeroMouse({ x: 0, y: 0, rotateX: 0, rotateY: 0, active: false });
+  };
 
   const openPrivacy = () => setLegalModalState({ isOpen: true, type: 'privacy' });
   const openTerms = () => setLegalModalState({ isOpen: true, type: 'terms' });
@@ -89,9 +108,20 @@ export default function HomePage() {
         
         {/* HERO SECTION WITH ULTRA-FAST LOOPING BACKGROUND VIDEO & FIGURE-GROUND CONTRAST */}
         <section
-          className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden"
+          onMouseMove={handleHeroMouseMove}
+          onMouseLeave={handleHeroMouseLeave}
+          className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden perspective-[1000px]"
           aria-label="Hero"
         >
+          {/* Desktop Interactive Spotlight Following Mouse Cursor */}
+          {heroMouse.active && (
+            <div
+              className="pointer-events-none absolute inset-0 z-1 hidden lg:block transition-opacity duration-300"
+              style={{
+                background: `radial-gradient(750px circle at ${heroMouse.x}px ${heroMouse.y}px, rgba(204, 145, 102, 0.14), transparent 75%)`,
+              }}
+            />
+          )}
           {/* Background Looping Video */}
           <div className="absolute inset-0 w-full h-full overflow-hidden select-none pointer-events-none z-0">
             <video
@@ -333,6 +363,9 @@ export default function HomePage() {
 
         {/* CÓMO FUNCIONA (3 PASOS) */}
         <HowItWorks />
+
+        {/* CATÁLOGO DE ESTILOS & FORMATOS VISUALES (CON REPRODUCTOR 3D MOUSE PARALLAX) */}
+        <VideoStylesShowcase />
 
         {/* PORTFOLIO & CASOS REALES EMBEBIDOS */}
         <PortfolioGrid />
